@@ -10,10 +10,10 @@
       "port": 10853,
       "protocol": "tcp",
       "tls": {
-          "enable": true,
-          "cert_path": "",
-          "key_path": "",
-          "ca_path": ""
+        "enable": true,
+        "cert_path": "",
+        "key_path": "",
+        "ca_path": ""
       }
     }
   ],
@@ -40,22 +40,25 @@
       "path": "/tmp/redins.log",
       "time_format": "2006-01-02 15:04:05",
       "kafka": {
-          "enable": true,
-          "topic": "redins",
-          "brokers": ["127.0.0.1:9092"]
+        "enable": true,
+        "topic": "redins",
+        "brokers": ["127.0.0.1:9092"]
       }
     },
-    "upstream": [{
-      "ip": "1.1.1.1",
-      "port": 53,
-      "protocol": "udp",
-      "timeout": 400
-    },{
-      "ip": "8.8.8.8",
-      "port": 53,
-      "protocol": "udp",
-      "timeout": 400
-    }],
+    "upstream": [
+      {
+        "ip": "1.1.1.1",
+        "port": 53,
+        "protocol": "udp",
+        "timeout": 400
+      },
+      {
+        "ip": "8.8.8.8",
+        "port": 53,
+        "protocol": "udp",
+        "timeout": 400
+      }
+    ],
     "geoip": {
       "enable": true,
       "country_db": "geoCity.mmdb",
@@ -98,7 +101,7 @@
     "enable": true,
     "rate": 60,
     "burst": 10,
-    "blacklist":[],
+    "blacklist": [],
     "whitelist": []
   }
 }
